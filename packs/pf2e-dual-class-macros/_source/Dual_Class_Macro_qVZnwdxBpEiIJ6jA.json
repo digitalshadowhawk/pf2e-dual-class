@@ -5,7 +5,7 @@
   "author": "518p5UNngMcX2pA2",
   "img": "icons/svg/dice-target.svg",
   "scope": "global",
-  "command": "const classes = [\n    ...game.items.contents.filter((i) => i.type === \"class\"),\n    ...(\n        await Promise.all(\n            game.packs.contents\n                .filter((p) => p.metadata.type === \"Item\")\n                .map((p) => p.getDocuments({ type: \"class\" })),\n        )\n    ).flat(),\n].filter((c) => !c.getFlag(\"pf2e-dual-class\", \"sourceClasses\"));\n\nconst module = game.modules.get(\"pf2e-dual-class\");\nconst picked = await module.api.promptForTwoClasses(classes);\nif (picked) await module.api.createDualClassItem(picked.class1, picked.class2);",
+  "command": "const module = game.modules.get(\"pf2e-dual-class\");\nconst picked = await module.api.promptForTwoClasses();\nif (picked) await module.api.createDualClassItem(picked.class1, picked.class2);",
   "folder": null,
   "ownership": {
     "default": 0,
@@ -17,7 +17,7 @@
     "systemId": "pf2e",
     "systemVersion": "8.2.0",
     "createdTime": 1787292241841,
-    "modifiedTime": 1787322133551,
+    "modifiedTime": 1787324708669,
     "lastModifiedBy": "518p5UNngMcX2pA2",
     "compendiumSource": null,
     "duplicateSource": null,

@@ -164,7 +164,8 @@ async function resyncDualClassItem(item) {
     ui.notifications.info(`${item.name} resynced.`);
 }
 
-async function promptForTwoClasses(classesData) {
+async function promptForTwoClasses() {
+    const classesData = await getAvailableClasses();
     const sorted = [...classesData].sort((a, b) => a.name.localeCompare(b.name));
     const optionsHtml = sorted.map(c => `<option value="${c.uuid}">${c.name}</option>`).join("");
 
@@ -195,12 +196,12 @@ async function promptForTwoClasses(classesData) {
                     class2: button.form.elements.class2.value
                 })
             },
-            { action: "cancel", label: "Cancel", callback: () => null }
+            { action: "cancel", label: "Cancel" }
         ],
         rejectClose: false
     });
 
-    if (!result) return null;
+    if (!result || result === "cancel") return null;
 
     if (result.class1 === result.class2) {
         ui.notifications.warn("You must select two different classes.");
@@ -245,11 +246,27 @@ function mergeRules(class1Rules, class2Rules) {
     return merged;
 }
 
+async function getAvailableClasses() {
+    const classes = [
+        ...game.items.contents.filter((i) => i.type === "class"),
+        ...(
+            await Promise.all(
+                game.packs.contents
+                    .filter((p) => p.metadata.type === "Item")
+                    .map((p) => p.getDocuments({ type: "class" })),
+            )
+        ).flat(),
+    ];
+
+    return classes.filter((c) => !c.getFlag(FLAG_SCOPE, "sourceClasses"));
+}
+
 Hooks.once("init", () => {
     game.modules.get(FLAG_SCOPE).api = {
         createDualClassItem,
         resyncDualClassItem,
-        promptForTwoClasses
+        promptForTwoClasses,
+        getAvailableClasses
     };
 });
 
