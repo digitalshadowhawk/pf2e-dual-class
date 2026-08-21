@@ -1,0 +1,28 @@
+{
+  "name": "Dual Class Macro",
+  "type": "script",
+  "_id": "qVZnwdxBpEiIJ6jA",
+  "author": "518p5UNngMcX2pA2",
+  "img": "icons/svg/dice-target.svg",
+  "scope": "global",
+  "command": "const packKeys = [\"pf2e.classes\", \"battlezoo-eldamon-pf2e.classes\"];\nconst classesData = [];\nfor (const pack of game.packs.filter(p => packKeys.includes(p.collection))) {\n  classesData.push(...(await pack.getIndex()));\n}\n\nconst module = game.modules.get(\"pf2e-dual-class\");\nconst picked = await module.api.promptForTwoClasses(classesData);\nif (picked) await module.api.createDualClassItem(picked.class1, picked.class2);",
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "518p5UNngMcX2pA2": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "createdTime": 1787292241841,
+    "modifiedTime": 1787292241841,
+    "lastModifiedBy": "518p5UNngMcX2pA2",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "_key": "!macros!qVZnwdxBpEiIJ6jA"
+}

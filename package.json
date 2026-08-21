@@ -1,0 +1,12 @@
+{
+  "name": "pf2e-dual-class",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.4"
+  },
+  "scripts": {
+    "pack:extract": "fvtt package unpack \"pf2e-dual-class-macros\" --clean",
+    "pack:build": "fvtt package pack \"pf2e-dual-class-macros\""
+  }
+}

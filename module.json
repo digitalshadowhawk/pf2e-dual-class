@@ -1,0 +1,57 @@
+{
+  "id": "pf2e-dual-class",
+  "title": "PF2e Dual Class",
+  "description": "<p>Add support for the Dual Class variant rule</p>",
+  "version": "#{VERSION}#",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.367"
+  },
+  "authors": [
+    {
+      "name": "Hawk",
+      "url": "https://github.com/digitalshadowhawk",
+      "discord": "digitalshadowhawk",
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "canUpload": true
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/master/system.pf2e.json",
+        "compatibility": {}
+      },
+      {
+        "id": "sf2e",
+        "type": "system",
+        "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/master/system.sf2e.json",
+        "compatibility": {}
+      }
+    ]
+  },
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
+  "license": "LICENSE",
+  "readme": "README.md",
+  "packs": [
+    {
+      "name": "pf2e-dual-class-macros",
+      "label": "PF2e Dual Class Macros",
+      "path": "packs/pf2e-dual-class-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ]
+}

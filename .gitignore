@@ -1,0 +1,3 @@
+node_modules/
+packs/pf2e-dual-class-macros/*
+!packs/pf2e-dual-class-macros/_source/
