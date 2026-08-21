@@ -7,6 +7,6 @@
   },
   "scripts": {
     "pack:extract": "fvtt package unpack \"pf2e-dual-class-macros\" --clean",
-    "pack:build": "fvtt package pack \"pf2e-dual-class-macros\" --id pf2e-dual-class --type Module"
+    "pack:build": "fvtt package pack \"pf2e-dual-class-macros\" --id pf2e-dual-class --type Module --in packs/pf2e-dual-class-macros/_source --out packs/pf2e-dual-class-macros"
   }
 }
