@@ -8,3 +8,25 @@ Notable changes include:
 - Cleaned up old code from earlier Foundry versions
 - Fixed primary class DC label, so it's just the first class rather than the dual-named class name
 - Fixed bug that required certain classes be added first.
+
+# Usage
+Run the macro found in this module's macro compendium.  
+  
+  <img width="525" height="334" alt="image" src="https://github.com/user-attachments/assets/42dc0442-d149-4034-95ff-690b110a394a" />
+  <img width="540" height="450" alt="image" src="https://github.com/user-attachments/assets/4b29a11f-0ccf-4fe7-8666-1510bd206d1d" />
+  
+  
+  The dialog will allow you to select from any available classes, either in the compendiums or as custom items in your world. It will filter out any dual class items created by this module.  
+
+  <img width="526" height="521" alt="image" src="https://github.com/user-attachments/assets/ecea2588-99ce-4735-b572-bf30dbaf2650" />
+  
+# Building Yourself
+To compile the module yourself, run the following commands
+  
+  * npm install
+  
+  * npm run pack:build  
+
+  To extract the macro after making edits, run the following command
+  
+  * npm run pack:extract
