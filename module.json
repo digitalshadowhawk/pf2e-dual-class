@@ -37,6 +37,18 @@
       }
     ]
   },
+  "recommends": [
+      {
+        "id": "pf2e-sf2e-extra-feat-slots",
+        "name": "PF2e/SF2e Extra Feat Slots",
+        "type": "module",
+        "reason": "For extra class feats sections",
+        "compatibility": {
+          "minimum": "0.2.3"
+        },
+        "manifest": "https://github.com/digitalshadowhawk/pf2e-sf2e-extra-feat-slots/releases/latest/download/module.json"
+      }
+    ],
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
   "download": "#{DOWNLOAD}#",
