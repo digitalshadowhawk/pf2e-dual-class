@@ -35,9 +35,8 @@
         "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/master/system.sf2e.json",
         "compatibility": {}
       }
-    ]
-  },
-  "recommends": [
+    ],
+    "recommends": [
       {
         "id": "pf2e-sf2e-extra-feat-slots",
         "name": "PF2e/SF2e Extra Feat Slots",
@@ -49,6 +48,7 @@
         "manifest": "https://github.com/digitalshadowhawk/pf2e-sf2e-extra-feat-slots/releases/latest/download/module.json"
       }
     ],
+  },
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
   "download": "#{DOWNLOAD}#",
