@@ -47,7 +47,7 @@
         },
         "manifest": "https://github.com/digitalshadowhawk/pf2e-sf2e-extra-feat-slots/releases/latest/download/module.json"
       }
-    ],
+    ]
   },
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
